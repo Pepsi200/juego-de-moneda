@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+
+  <title>Flip the coin | devChallenges.io</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="coin-container" aria-label="Contenedor de la moneda">
+    <div class="coin-img-wrapper">
+      <img id="coinImg" class="coin-img" src="resources/heads.svg" alt="Moneda" aria-live="polite" />
+    </div>
+    <div id="result" class="result" aria-live="polite">&nbsp;</div>
+    <div id="counters" style="margin-bottom: 12px;">
+      <span id="headsCount">Cara: 0</span> |
+      <span id="tailsCount">Cruz: 0</span>
+    </div>
+    <div class="stats-bar" aria-label="Estadísticas de lanzamientos">
+      <div class="bar heads" id="headsBar">50%</div>
+      <div class="bar tails" id="tailsBar">50%</div>
+    </div>
+    <div id="streakMsg" style="color: #059669; font-weight: 600; min-height: 1.5rem;"></div>
+    <button class="flip-btn" id="flipBtn" onclick="flipCoin()">Lanzar moneda</button>
+    <button class="flip-btn" id="resetBtn" style="background:#6b7280; margin-top:8px;"
+      onclick="resetCounters()">Reiniciar</button>
+    <div class="controls-row">
+      <button id="themeBtn" class="icon-btn" onclick="toggleTheme()" title="Tema claro/oscuro">🌙</button>
+      <label for="langSelect">Idioma:</label>
+      <select id="langSelect" onchange="changeLang()">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </div>
+  <footer class="author-info" aria-label="Información del autor">
+    <span>
+      Creado por <a href="https://github.com/marcosdev" target="_blank" rel="noopener">marcos dev</a> |
+      Desafío de <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        rel="noopener">devChallenges.io</a>
+    </span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
